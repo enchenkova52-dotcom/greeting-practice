@@ -1,0 +1,22 @@
+IntegerCache кэширует значения Integer от -128 до 127.
+
+При автоупаковке числа из этого диапазона берутся из кэша и ссылаются на один объект.
+Числа вне диапазона создают новые объекты.
+
+Результаты для i1 = 128:
+a1 == i1 -> true (unboxing)
+b1 == i1 -> true (unboxing)
+a1 == b1 -> false (разные объекты)
+a1.equals(i1) -> true
+b1.equals(i1) -> true
+a1.equals(b1) -> true
+
+Результаты для i2 = 127:
+a2 == i2 -> true (unboxing)
+b2 == i2 -> true (unboxing)
+a2 == b2 -> true (один объект из кэша)
+a2.equals(i2) -> true
+b2.equals(i2) -> true
+a2.equals(b2) -> true
+
+Вывод: для сравнения Integer объектов всегда использовать .equals(), так как == сравнивает ссылки.
