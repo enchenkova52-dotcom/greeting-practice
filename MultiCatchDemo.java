@@ -47,7 +47,7 @@ public class MultiCatchDemo {
         }
         
         // 3. неправильный порядок (выдаст ошибку компиляции)
-        System.out.println("\n Неправильный порядок (закомментировано) ");
+        System.out.println("\n Неправильный порядок ");
         System.out.println("// catch (Ex1 e) {}  catch (Ex3 e) {} - так нельзя!");
         System.out.println("// Потому что Ex3 подкласс Ex1, и первый catch перехватит всё");
     }
