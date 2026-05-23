@@ -16,7 +16,7 @@ public class MultiCatchDemo {
     public static void main(String[] args) {
         
         // 1. несколько исключений обрабатываются одинаково
-        System.out.println(" Одинаковая обработка ");
+        System.out.println(" Одинаковая обработка");
         String[] inputs = {"not a number", "0", "5"};
         
         for (String input : inputs) {
@@ -31,7 +31,7 @@ public class MultiCatchDemo {
         }
         
         // 2. иерархия исключений (Ex3 <- Ex2 <- Ex1)
-        System.out.println("\n Иерархия исключений ");
+        System.out.println("\n Иерархия исключений");
         
         try {
             throw new Ex3("Исключение Ex3");
